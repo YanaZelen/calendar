@@ -1,0 +1,47 @@
+import java.security.spec.RSAOtherPrimeInfo;
+
+//Массив с временами года
+//Массив с месяцами
+//Массив с возможными днями недели
+//Массив с числами месяца
+
+public class Main {
+    public static void main(String args[]) {
+        int[] months_31 = new int[] {1, 3, 5, 7, 8, 10, 12};
+        int[] months_30 = new int[] {4, 6, 9, 11};
+        int[] months_28 = new int[2];
+        int date[] = new int[31];
+
+        int i;
+        for (i = 0; i < 31; i++) {
+            date[i] = i;
+        }
+
+        int[][] calendar_months_31 = new int[7][31];
+        int[][] calendar_months_30 = new int[4][30];
+        int[][] calendar_months_28 = new int[1][28];
+
+
+        for (int j = 0; j < 7; ++j) {
+            calendar_months_31[j][0] = months_31[j];
+                for (int k = 1; k < 31; ++k){
+                    calendar_months_31[j][k] = k;
+            }
+        }
+        for (int l = 0; l < 4; ++l) {
+            calendar_months_30[l][0] = months_30[l];
+            for (int q = 1; q < 30; ++q) {
+                calendar_months_30[l][q] = q;
+            }
+        }
+        for (int jl = 0; jl < 1; ++jl) {
+            calendar_months_28[jl][0] = months_28[jl];
+            for (int kq = 1; kq < 28; ++kq) {
+                calendar_months_28[jl][kq] = kq;
+            }
+        }
+
+        System.out.println(" " + calendar_months_31[3][0] + " ");
+        System.out.println(' ');
+    }
+}
