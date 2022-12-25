@@ -1,0 +1,42 @@
+import java.security.spec.RSAOtherPrimeInfo;
+
+//Массив с временами года
+//Массив с месяцами
+//Массив с возможными днями недели
+//Массив с числами месяца
+
+public class Main {
+    public static void main(String args[]) {
+        String[] seasons = new String[] {"Лето", "Весна", "Осень", "Зима"};
+        String[] months = new String[] {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+        String[] weekday = new String[] {"Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"};
+        int date[] = new int[31];
+
+        int i;
+        for (i = 0; i < 31; i++) {
+            date[i] = i;
+        }
+
+        for (int j = 0; j < 4; j++) {
+            System.out.print(" " + seasons[j] + " ");;
+        }
+        System.out.println(' ');
+        for (int k = 0; k < 12; k++) {
+            System.out.print(" " + months[k] + " ");
+        }
+        System.out.println(' ');
+        for (int l = 0; l < 7; l++) {
+            System.out.print(" " + weekday[l] + " ");
+        }
+        System.out.println(' ');
+        for (int m = 0; m < 31; m++) {
+            System.out.print(" " + date[m] + " ");
+        }
+        System.out.println(' ');
+
+        System.out.println(months[2] + ' ' + weekday[4] + ' ' + date[10]);
+        System.out.println(seasons[3] + ' ' + months[0] + ' ' + weekday[6] + ' ' + date[22]);
+        System.out.println(months[3] + ' ' + weekday[1] + ' ' + date[15]);
+    }
+}
